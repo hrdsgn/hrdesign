@@ -1,0 +1,113 @@
+:root{
+  --bg:#03051f;
+  --bg2:#061047;
+  --blue:#087cff;
+  --blue-soft:#55a1ff;
+  --white:#f6f7ff;
+  --muted:#9ba5c7;
+  --line:#17285e;
+  --card:#071040;
+  --shadow:0 30px 60px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{transition:.25s ease}
+img{max-width:100%;display:block}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:10;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+header{position:fixed;z-index:20;top:0;left:0;right:0;height:82px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(16px);background:rgba(3,5,31,.55)}
+.brand{font:800 25px 'Barlow Condensed';letter-spacing:1px;color:#fff;text-decoration:none}
+.brand span{color:var(--blue)}
+nav{display:flex;gap:30px}
+nav a,.pill{color:#dce3ff;text-decoration:none;font-size:13px}
+nav a:hover{color:#fff}
+.pill{border:1px solid #2a4a91;border-radius:100px;padding:12px 18px}
+.pill:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.22)}
+.hero{min-height:100vh;padding:135px 5vw 55px;position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:4vw;align-items:center;overflow:hidden;background:radial-gradient(circle at 83% 40%,#0a2674 0,transparent 27%),linear-gradient(120deg,#03051f,#050936 65%,#061350)}
+.eyebrow,small{font-size:11px;letter-spacing:2px;color:#9fb2e9}
+.eyebrow span{display:inline-block;width:25px;height:1px;background:var(--blue);vertical-align:middle;margin-right:10px}
+.hero h1,.section-head h2,.about h2,.process h2,.contact h2{font-family:'Barlow Condensed';font-weight:800;line-height:.82;letter-spacing:-2px;margin:34px 0}
+.hero h1{font-size: 72px}
+.section-head h2,.about h2,.process h2{font-size:clamp(65px,8vw,120px);margin:20px 0 0}
+h1 em,h2 i{font-style:normal;color:var(--blue)}
+.hero-copy{position:relative;z-index:2}
+.hero-text{max-width:560px;color:#b9c1dc;line-height:1.75;font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:15px 20px;border:1px solid #263e80;border-radius:100px;color:#fff;text-decoration:none;font-size:13px;display:inline-flex;align-items:center;justify-content:center}
+.primary{background:var(--blue);border-color:var(--blue)}
+.hero-links{display:grid;gap:16px;margin-top:38px;max-width:540px}
+.hero-links a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;color:#fff;text-decoration:none;border-top:1px solid rgba(255,255,255,.1)}
+.hero-links a:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.hero-links span{font-size:12px;color:#8ea6df}
+.hero-visual{position:relative;z-index:1;display:flex;justify-content:center}
+.portrait-wrap{position:relative;width:min(520px,100%);padding:20px;border:1px solid rgba(88,128,255,.18);background:linear-gradient(180deg,rgba(7,16,64,.68),rgba(6,8,32,.92));border-radius:28px;box-shadow:var(--shadow)}
+.portrait-glow{position:absolute;inset:15% -8% -6% 20%;background:radial-gradient(circle,#176cff 0,rgba(23,108,255,.28) 25%,rgba(23,108,255,0) 70%);filter:blur(36px);pointer-events:none}
+.portrait{position:relative;z-index:1;width:100%;aspect-ratio:1/1.1;object-fit:cover;border-radius:20px;background:#fff}
+.portrait-card{position:absolute;left:32px;right:32px;bottom:28px;z-index:2;padding:18px 20px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(3,5,31,.22),rgba(3,5,31,.72));backdrop-filter:blur(12px);border-radius:18px}
+.portrait-card small{display:block;margin-bottom:8px;color:#8db8ff}
+.portrait-card strong{display:block;font:700 28px 'Barlow Condensed';letter-spacing:.2px}
+.portrait-card span{color:#d5defd;font-size:13px}
+.orb{position:absolute;width:360px;height:360px;border:1px solid rgba(34,116,255,.18);border-radius:50%;right:-100px;top:32%;box-shadow:0 0 90px rgba(26,93,255,.12)}
+.scroll{position:absolute;right:5vw;bottom:35px;font-size:9px;letter-spacing:2px;color:#7180b4}.scroll b{font-size:18px;margin-left:12px}
+.projects,.services,.process{padding:130px 5vw}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:65px}
+.section-head p{max-width:420px;color:var(--muted);line-height:1.7;margin:0}
+.section-side{display:grid;gap:22px;justify-items:start}
+.section-actions{display:flex;gap:12px;flex-wrap:wrap}
+.carousel-shell{position:relative;padding:46px 70px 34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.carousel{position:relative;min-height:610px;perspective:1600px;transform-style:preserve-3d;overflow:hidden;touch-action:pan-y}
+.project-slide{position:absolute;top:50%;left:50%;width:min(360px,66vw);transform-origin:center center;transition:transform .65s cubic-bezier(.22,.61,.36,1),opacity .55s ease,filter .55s ease;cursor:grab;user-select:none}
+.project-slide img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:28px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
+.slide-meta{padding-top:18px;text-align:center;opacity:0;transition:opacity .35s ease}
+.slide-meta strong{display:block;font:700 26px 'Barlow Condensed';letter-spacing:.3px}
+.slide-meta span{font-size:12px;color:#9cb0e3;letter-spacing:.25px}
+.project-slide.is-active .slide-meta{opacity:1}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid #28478c;background:rgba(6,10,40,.8);color:#fff;font-size:20px;display:grid;place-items:center;cursor:pointer;z-index:4}
+.carousel-btn:hover{background:#0a1e5b}
+.carousel-btn.prev{left:0}.carousel-btn.next{right:0}
+.carousel-note{text-align:center;color:#7f91c5;font-size:11px;letter-spacing:1px;margin-top:18px}
+.services{background:#05072b}
+.service-list{border-top:1px solid var(--line)}
+.service-list>div{display:grid;grid-template-columns:70px 1.3fr 1fr 40px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:.25s}
+.service-list>div:hover{padding-left:15px;background:#071040}
+.service-list b{font-size:11px;color:#5474c3}.service-list h3{font:700 clamp(30px,4vw,55px) 'Barlow Condensed';margin:0}.service-list p{color:var(--muted);font-size:13px;line-height:1.6}.service-list span{color:var(--blue);font-size:24px}
+.about{min-height:780px;padding:130px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:linear-gradient(135deg,#06114d,#03051f)}
+.about-mark{font:italic 800 clamp(180px,28vw,430px)/1 'Barlow Condensed';color:transparent;-webkit-text-stroke:1px #1947a0;letter-spacing:-30px;opacity:.65}
+.about-copy p{color:#b8c1df;line-height:1.8;max-width:600px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.chips span,.tag{font-size:9px;letter-spacing:1.4px;border:1px solid #234582;border-radius:50px;padding:8px 12px}
+.process .steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:65px}.steps div{padding:30px;border-right:1px solid var(--line);min-height:210px}.steps b{color:var(--blue);font-size:11px}.steps h3{font:700 35px 'Barlow Condensed';margin:55px 0 5px}.steps p{color:var(--muted);font-size:12px}
+.contact{text-align:center;padding:160px 5vw;background:radial-gradient(circle at 50% 100%,#0c3a9a,transparent 42%),#03051f}.contact .tag{display:inline-block;color:#8bb7ff}.contact h2{font-size:clamp(80px,12vw,180px);margin:45px 0 25px}.contact>p{max-width:550px;margin:0 auto 60px;color:var(--muted);line-height:1.7}.contact-links{max-width:820px;margin:auto;border-top:1px solid var(--line)}.contact-links a{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#fff;text-decoration:none;padding:24px 5px;border-bottom:1px solid var(--line);font:600 22px 'Barlow Condensed'}.contact-links a:hover{padding-left:12px;background:rgba(255,255,255,.015)}.contact-links span{font:400 12px Inter;color:#8ea6df}
+footer{padding:35px 5vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);color:#7583ad;font-size:10px}footer p{margin:0}
+[data-animate]{opacity:0;transform:translateY(28px)}
+
+@media (max-width:1100px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:120px}
+  .hero-visual{order:-1}
+  .portrait-wrap{max-width:480px}
+  .scroll{display:none}
+}
+
+@media(max-width:760px){
+  header{height:68px}
+  nav{display:none}
+  .pill{padding:10px 14px;font-size:12px}
+  .hero{padding:100px 5vw 60px}
+  .hero h1{font-size:19vw}
+  .hero-text{font-size:15px}
+  .portrait-wrap{padding:14px;border-radius:22px}
+  .portrait-card{left:20px;right:20px;bottom:18px}
+  .portrait-card strong{font-size:24px}
+  .section-head{display:block}
+  .section-head p{margin-top:30px}
+  .section-actions{margin-top:18px}
+  .carousel-shell{padding:28px 0 24px}
+  .carousel{min-height:490px;overflow:visible}
+  .project-slide{width:min(280px,74vw)}
+  .carousel-btn{display:none}
+  .slide-meta strong{font-size:22px}
+  .service-list>div{grid-template-columns:40px 1fr 25px}.service-list p{grid-column:2;margin-top:8px}
+  .about{grid-template-columns:1fr}.about-mark{display:none}
+  .process .steps{grid-template-columns:1fr 1fr}.steps div{border-bottom:1px solid var(--line)}
+  footer{gap:15px;flex-direction:column;align-items:flex-start}
+  .projects,.services,.process,.about{padding:90px 5vw}
+  .contact-links a{font-size:20px}
+}
